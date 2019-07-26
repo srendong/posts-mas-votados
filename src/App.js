@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Styles/App.scss";
 import Post from "./Components/Post/Post";
 
 class App extends Component {
@@ -8,15 +8,11 @@ class App extends Component {
       {
         id: 1,
         title: "Manejo de dependencias en Ruby con Bundler",
-        description:
-          "Bundler es una manejador de dependencias para Ruby. Aunque viene incluido con Rails, Bundler no es exclusivo de Rails, lo puedes usar para manejar las dependencias de cualquier proyecto de Ruby.",
-        url:
-          "http://blog.makeitreal.camp/manejo-de-dependencias-en-ruby-con-bundler/",
+        description: "Bundler es una manejador de dependencias para Ruby. Aunque viene incluido con Rails, Bundler no es exclusivo de Rails, lo puedes usar para manejar las dependencias de cualquier proyecto de Ruby.",
+        url: "http://blog.makeitreal.camp/manejo-de-dependencias-en-ruby-con-bundler/",
         votes: 42,
-        writer_avatar_url:
-          "//a.disquscdn.com/uploads/users/2864/1155/avatar92.jpg?1481303405",
-        post_image_url:
-          "http://blog.makeitreal.camp/assets/images/bg-images/bundler.jpg"
+        writer_avatar_url: "//a.disquscdn.com/uploads/users/2864/1155/avatar92.jpg?1481303405",
+        post_image_url: "http://blog.makeitreal.camp/assets/images/bg-images/bundler.jpg"
       },
       {
         id: 2,

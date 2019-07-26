@@ -1,0 +1,36 @@
+//variables
+$colorTitulo: rgb(93, 93, 98);
+$colorSubtitulo: rgb(93, 93, 98);
+$colorDescripcion: rgb(141, 150, 156);
+$colorBotonSeleccionado: rgb(0, 255, 234);
+
+//mixins
+
+@mixin titulos {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Assistant', sans-serif;
+    color: $colorTitulo
+}
+
+@mixin subtitulos {
+    font-size: 1.2rem;
+    font-weight: regular;
+    font-family: 'Assistant', sans-serif;
+    color: $colorSubtitulo
+}
+
+@mixin descripcion {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: $colorDescripcion
+}
+
+@mixin imagenes {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+

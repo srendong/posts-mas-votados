@@ -1,0 +1,80 @@
+.principal {
+  .titulo {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Assistant", sans-serif;
+    color: $colorTitulo;
+    margin: 2rem;
+    border-bottom: 2px solid rgb(153, 153, 153);
+    padding-bottom: 0.5rem;
+  }
+
+  .botones {
+    .boton{
+      font-size: 1.5rem;
+      margin:0.2rem;
+      color: rgb(112, 112, 112);
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    p {
+      @include descripcion;
+      font-size: 1.5rem;
+      margin-top: 0.9rem;
+      margin-right: 1rem;
+      margin-left: 2rem;
+    }
+
+    .seleccionado {
+      color: rgb(0, 168, 235);
+    }
+  }
+}
+
+// .principal {
+//   display: flex;
+//   align-items: center;
+
+//   .titulo {
+//     @include titulos(4rem);
+//     margin: 2rem;
+//   }
+
+//   .botones {
+//     display: flex;
+//     flex-flow: row wrap;
+//     align-items: center;
+//     padding: 2rem;
+
+//     p {
+//         font-size: 2rem;
+//         font-weight: regular;
+//         font-family: 'Assistant', sans-serif;
+//         color: $colorSubtitulo
+//     }
+
+//     .boton {
+//       @include botones;
+//     }
+
+//     .seleccionado {
+//       border: 2px solid;
+//       border-color: rgb(62, 67, 68) ;
+//       background: rgb(255, 99, 99);
+//       color: rgb(255, 255, 255);
+//       border-radius: 2.5rem;
+//       -webkit-border-radius: 2.5rem;
+//       -moz-border-radius: 2.5rem;
+//       -ms-border-radius: 2.5rem;
+//       -o-border-radius: 2.5rem;
+//       margin: 0.5rem;
+//       height: 5rem;
+//       width: 5rem;
+// }
+//   }
+
+//   .posts {
+//     width: 60%;
+//   }
+// }

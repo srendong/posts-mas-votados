@@ -6,8 +6,8 @@ $colorBotonSeleccionado: rgb(0, 255, 234);
 
 //mixins
 
-@mixin titulos {
-    font-size: 2rem;
+@mixin titulos($fs:2rem,) {
+    font-size: $fs;
     font-weight: bold;
     font-family: 'Assistant', sans-serif;
     color: $colorTitulo
@@ -34,3 +34,17 @@ $colorBotonSeleccionado: rgb(0, 255, 234);
     object-position: center;
 }
 
+@mixin botones {
+    border: 2px solid;
+    border-color: rgb(153, 153, 153) ;
+    background: none;
+    color: rgb(90, 90, 90);
+    border-radius: 2.5rem;
+    -webkit-border-radius: 2.5rem;
+    -moz-border-radius: 2.5rem;
+    -ms-border-radius: 2.5rem;
+    -o-border-radius: 2.5rem;
+    margin: 0.5rem;
+    height: 5rem;
+    width: 5rem;
+}

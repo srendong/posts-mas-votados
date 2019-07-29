@@ -8,11 +8,15 @@ class App extends Component {
       {
         id: 1,
         title: "Manejo de dependencias en Ruby con Bundler",
-        description: "Bundler es una manejador de dependencias para Ruby. Aunque viene incluido con Rails, Bundler no es exclusivo de Rails, lo puedes usar para manejar las dependencias de cualquier proyecto de Ruby.",
-        url: "http://blog.makeitreal.camp/manejo-de-dependencias-en-ruby-con-bundler/",
+        description:
+          "Bundler es una manejador de dependencias para Ruby. Aunque viene incluido con Rails, Bundler no es exclusivo de Rails, lo puedes usar para manejar las dependencias de cualquier proyecto de Ruby.",
+        url:
+          "http://blog.makeitreal.camp/manejo-de-dependencias-en-ruby-con-bundler/",
         votes: 42,
-        writer_avatar_url: "//a.disquscdn.com/uploads/users/2864/1155/avatar92.jpg?1481303405",
-        post_image_url: "http://blog.makeitreal.camp/assets/images/bg-images/bundler.jpg"
+        writer_avatar_url:
+          "//a.disquscdn.com/uploads/users/2864/1155/avatar92.jpg?1481303405",
+        post_image_url:
+          "http://blog.makeitreal.camp/assets/images/bg-images/bundler.jpg"
       },
       {
         id: 2,
@@ -56,24 +60,28 @@ class App extends Component {
 
   sortPosts = () => {
     if (this.state.UpDown === false) {
-      return this.state.posts.sort((a, b) => a.votes < b.votes ? -1 : 0).map(post => (
+      return this.state.posts
+        .sort((a, b) => (a.votes < b.votes ? -1 : 0))
+        .map(post => (
           <Post
             key={post.id}
             post={post}
             counterPlus={() => this.handlerUp(post.id)}
             counterLess={() => this.handlerDown(post.id)}
           />
-        ))
-        ;
+        ));
     } else {
-      return this.state.posts.sort((a, b) => a.votes < b.votes ? -1 : 0).map(post => (
+      return this.state.posts
+        .sort((a, b) => (a.votes < b.votes ? -1 : 0))
+        .map(post => (
           <Post
             key={post.id}
             post={post}
             counterPlus={() => this.handlerDown(post.id)}
             counterLess={() => this.handlerDown(post.id)}
           />
-        )).reverse()
+        ))
+        .reverse();
     }
   };
 
@@ -105,15 +113,34 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="titutlo">
-          <h1>Post mas populares</h1>
+      <div className="container principal ">
+        <div className="row">
+          <div className="col-12 text-center ">
+            <h1 className="titulo ">Posts mas populares</h1>
+          </div>
+          <div className=" col-12 botones  ">
+            <div className="row align-items-center">
+              <p>Orden:</p>
+              <i
+                className={
+                  this.state.UpDown
+                    ? "far fa-arrow-alt-circle-down boton seleccionado"
+                    : " boton far fa-arrow-alt-circle-down"
+                }
+                onClick={this.handlerUpDown}
+              />
+              <i
+                className={
+                  this.state.UpDown
+                    ? "far fa-arrow-alt-circle-up boton "
+                    : "far fa-arrow-alt-circle-up boton seleccionado"
+                }
+                onClick={this.handlerDownUp}
+              />
+            </div>
+          </div>
+          <div className="col-12  ">{this.sortPosts()}</div>
         </div>
-        <div>
-          <button onClick={this.handlerUpDown}>Desciende</button>
-          <button onClick={this.handlerDownUp}>Asciende</button>
-        </div>
-        <div className="posts">{this.sortPosts()}</div>
       </div>
     );
   }
